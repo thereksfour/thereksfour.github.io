@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ventuals logo">
+  <rect width="64" height="64" rx="8" fill="#f4f4f2"/>
+  <path d="M17 17l10 5-12 11z" fill="#162022"/>
+  <path d="M33 14l16 22-22 2z" fill="#1f2a2c"/>
+  <path d="M13 37h7l3 5h23l8-5-9 11-7 3H20l-4-3-3-5z" fill="#1b2426"/>
+  <path d="M21 42l2 4h18l4-4z" fill="#263234"/>
+</svg>
