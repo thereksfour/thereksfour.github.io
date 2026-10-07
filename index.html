@@ -16,7 +16,9 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://github.com/thereksfour.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=5ba86e87ba41">
+    <script defer src="assets/public-portfolio-data.js?v=82990e99fccc"></script>
+    <script defer src="assets/public-portfolio.js?v=2aa7fd747e82"></script>
   </head>
   <body>
     <header class="site-header">
@@ -25,6 +27,7 @@
         <span>cccz</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#public-portfolio">Portfolio</a>
         <a href="#results">Results</a>
         <a href="#reviews">Reviews</a>
         <a href="#research">Research</a>
@@ -37,13 +40,13 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Smart Contract Security Researcher</p>
-          <h1>High-impact protocol security reviews for DeFi, infrastructure, and complex on-chain systems.</h1>
+          <h1>Security reviews for complex protocols.</h1>
           <p class="lede">
-            I review protocol logic, accounting invariants, trust boundaries, and exploit paths across smart contract systems.
-            My background combines top-tier competitive audit performance, private reviews, and broader vulnerability research.
+            I review vaults, lending, staking, trading, wallets and infrastructure.
+            My work includes audits through TrustSec, Zenith, Cantina and Spearbit, alongside competitive reviews and security research.
           </p>
           <div class="actions">
-            <a class="button primary" href="https://cantina.xyz/u/thereksfour">Cantina Profile</a>
+            <a class="button primary" href="#public-portfolio">Explore Public Work</a>
             <a class="button secondary" href="https://code4rena.com/@cccz">Code4rena Profile</a>
           </div>
         </div>
@@ -53,20 +56,16 @@
             <span>Code4rena all-time ranking</span>
           </div>
           <div>
-            <strong>300+</strong>
+            <strong>320</strong>
             <span>valid High/Medium findings on Code4rena</span>
           </div>
           <div>
-            <strong>115</strong>
+            <strong>116</strong>
             <span>projects helped secure on Code4rena</span>
           </div>
           <div>
-            <strong>30+</strong>
-            <span>Cantina review scopes</span>
-          </div>
-          <div>
-            <strong>30+</strong>
-            <span>Zenith review scopes</span>
+            <strong id="hero-portfolio-total">101</strong>
+            <span>selected public reports and review records</span>
           </div>
         </aside>
       </section>
@@ -78,7 +77,7 @@
         </div>
         <div class="stats-grid">
           <article>
-            <span>$334K+</span>
+            <span>$335K+</span>
             <p>Code4rena awards</p>
           </article>
           <article>
@@ -86,7 +85,7 @@
             <p>valid High findings on Code4rena</p>
           </article>
           <article>
-            <span>215</span>
+            <span>216</span>
             <p>valid Medium findings on Code4rena</p>
           </article>
           <article>
@@ -98,6 +97,44 @@
             <p>Zenith review scopes</p>
           </article>
         </div>
+      </section>
+
+      <section id="public-portfolio" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Public Review Portfolio</p>
+          <h2>Find the experience that fits your protocol.</h2>
+          <p class="portfolio-intro">Browse reports and public review records by protocol, feature, provider or type of work. Competition entries include verified top-five finishes only, with placements shown alongside each entry.</p>
+        </div>
+        <div class="portfolio-counts" aria-label="Public portfolio totals">
+          <div><strong id="portfolio-total">101</strong><span>selected public records</span></div>
+          <div><strong id="portfolio-audits">63</strong><span>audit records</span></div>
+          <div><strong id="portfolio-competitions">32</strong><span>top-five competition finishes</span></div>
+          <div><strong id="portfolio-judging">6</strong><span>judging records</span></div>
+        </div>
+        <div class="portfolio-controls">
+          <label class="portfolio-search">Search protocols or features<input id="portfolio-search" type="search" placeholder="e.g. vault, Hyperliquid, ERC4626, AWS" autocomplete="off"></label>
+          <label>Provider<select id="portfolio-provider"><option value="">All providers</option></select></label>
+          <label>Protocol area<select id="portfolio-category"><option value="">All areas</option></select></label>
+          <label>Type of work<select id="portfolio-work"><option value="">All work</option><option value="Audits">Audits</option><option value="Competitions">Top-five competitions</option><option value="Judging">Judging</option></select></label>
+          <button id="portfolio-reset" type="button">Clear filters</button>
+        </div>
+        <div class="portfolio-toolbar">
+          <p id="portfolio-status" role="status" aria-live="polite">Loading public records…</p>
+          <a href="public-portfolio.md?v=f2d9e38b7bdc" download>Download portfolio ↗</a>
+        </div>
+        <div class="portfolio-table-wrap">
+          <table class="portfolio-table">
+            <thead><tr><th>Protocol / review</th><th>Provider / date</th><th>Features</th><th>Source</th></tr></thead>
+            <tbody id="portfolio-rows"></tbody>
+          </table>
+        </div>
+        <noscript><p><a href="public-portfolio.md?v=f2d9e38b7bdc">Open the selected public portfolio list.</a></p></noscript>
+        <div class="portfolio-pagination">
+          <button id="portfolio-prev" type="button">Previous</button>
+          <span id="portfolio-pages"></span>
+          <button id="portfolio-next" type="button">Next</button>
+        </div>
+        <p class="portfolio-note">Multiple reviews of the same protocol are listed separately. “Review page” indicates a public summary or participation record. Features describe the published review scope. Sources checked on October 7, 2026.</p>
       </section>
 
       <section id="results" class="section band">
